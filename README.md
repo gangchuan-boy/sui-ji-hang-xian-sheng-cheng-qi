@@ -111,6 +111,9 @@ If you find any airport missing, or want to improve the program, please contact 
 
 
 
+！！！！！本软件仅适用于模拟器，请不要在现实中使用！！！！！！！！！！
+!!! This software is only for simulator, please do not use it in real life! ! ! ! ! ! ! ! !
+
 
 
 
