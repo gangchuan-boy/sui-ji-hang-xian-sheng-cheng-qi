@@ -1,109 +1,89 @@
-软件功能概述
-这个软件是一个用于随机生成和比较机场信息的应用程序。它的主要功能包括：
+软件功能
+生成随机机场：
 
-随机生成两个机场：
+功能：根据用户设定的条件生成随机机场。
+条件：用户可以选择是否仅生成中国机场、生成距离不超过 600 海里的机场，以及设定最小距离（海里）。
+记录功能：
 
-软件能够从预定义的机场列表中随机选择两个不同的机场。
-机场列表包括国内和国际的主要民用机场。
-计算并显示两个机场的直线距离：
+记录生成结果：生成的机场信息会被记录下来，包括时间戳和生成的结果。
+查看历史记录：可以查看生成的历史记录，并进行清空操作。
+滚动条支持：记录显示区域支持滚动，方便查看大量记录。
+加载动画：
 
-计算两个随机生成的机场之间的直线距离，单位为海里（nautical miles）。
-使用地球上两个点的经纬度计算直线距离，确保距离计算的准确性。
-用户界面：
+功能：在处理时间较长的操作时，显示加载动画，以改善用户体验。
+反馈功能：
 
-生成随机机场：用户可以点击按钮生成两个随机机场，并查看它们的相关信息。
-600海里以内的选项：用户可以选择生成距离在600海里以内的机场对。
-显示结果：生成结果以弹出窗口的形式展示，包括机场的名称、四字码、距离等信息。
-UI 设计：界面经过优化，具有圆角毛玻璃效果，按钮和选项都经过美化，确保用户体验友好。
-用户交互：
+功能：提供反馈按钮，点击后可以打开邮件客户端，并预填邮件地址为 ems@gangchuan.top，方便用户反馈问题或建议。
+自定义用户界面（UI）：
 
-生成按钮：用户点击“生成随机机场”按钮来执行随机选择和距离计算操作。
-关闭按钮：用户可以关闭结果窗口或主窗口，操作简便。
-主要功能详细说明
-随机生成机场
-功能：从一个包含全球和中国主要民用机场的列表中，随机选择两个不同的机场。
-实现：使用 Python 的 random 模块进行随机选择，确保每次生成的结果都是不同的。
-计算直线距离
-功能：计算两个机场之间的直线距离，单位为海里。
-实现：使用地理坐标（经度和纬度）来计算两个点之间的距离。常用的公式是 Haversine 公式，适用于地球表面上的两点距离计算。
-用户界面
-生成按钮：点击按钮可以生成两个随机机场及其直线距离。
-600海里以内的选项：用户可以选择是否仅生成距离在600海里以内的机场对。
-结果显示：结果以弹出窗口形式展示，包括：
-机场名称
-四字码（ICAO 代码）
-距离（以海里为单位）
-UI 设计
-界面美化：使用圆角毛玻璃效果来提升视觉效果，使界面看起来现代且友好。
-按钮和选项：按钮和选项经过设计，以确保用户操作简便、界面统一且美观。
-使用场景
-航空爱好者：对航空感兴趣的用户可以使用该软件来随机选择两个机场，并了解它们之间的距离。
-航空公司和飞行员：可以用来测试机场间的距离，帮助规划航线或了解机场之间的地理关系。
-教育用途：可以作为地理或航空学科的教学工具，帮助学生理解地理位置和距离计算的实际应用。
-总结
-该软件的功能不仅提供了一个有趣的方式来探索世界各地的机场，还通过简单易用的界面提供了实用的信息。无论是航空爱好者还是专业人士，都能从中获得有价值的数据和愉快的用户体验。如果你有任何进一步的功能需求或改进建议，欢迎随时提出！
+现代化设计：使用 CustomTkinter 库创建现代化、科技感强的用户界面。
+深色模式：界面支持深色模式，符合现代应用的设计趋势。
+响应式布局：界面元素根据窗口大小调整布局，确保在不同分辨率和窗口大小下都能正常显示。
+字体和颜色统一：统一使用微软雅黑字体，并提供自定义颜色选项，以提升视觉一致性。
+用户友好的操作：
 
+滑块调整：最小距离的调整使用滑块，用户可以方便地设定最小距离。
+按钮样式：按钮样式现代，配有清晰的文本和颜色，提升用户体验。
+错误处理：提供错误提示框，帮助用户纠正输入错误。
+应用程序逻辑清晰：
 
-![9f8cb5cb9aa59789cc0e59a3b6cb1501](https://github.com/user-attachments/assets/fb90618e-1ec1-4e43-9f53-c50df06207a0)
-![fbadf9deebe3e99490dec85187d2b379](https://github.com/user-attachments/assets/cc87e0a3-e83a-4864-a895-5775603479c5)
+功能分区：主界面分为生成机场、记录显示和反馈功能区域，布局清晰。
+记录清空和显示：提供清空记录的功能，并在记录界面显示更新的记录。
+界面可定制：
 
-如果你发现什么机场没有，或者想改进程序请联系邮箱：ems@gangchuan.email
+主题切换：支持深色模式和浅色模式的切换，适应不同的用户偏好。
+按钮和标签：所有按钮和标签的样式可以根据需要进行调整，以符合应用的主题和风格。
+软件优点
+用户体验优化：现代化的 UI 设计和响应式布局确保了良好的用户体验。
+功能全面：不仅能生成随机机场，还提供记录、反馈等多种功能，满足不同用户需求。
+易用性：界面直观，操作简单，适合各种用户使用。
+灵活配置：用户可以根据需求设置生成条件，并调整界面主题。
+稳定性：通过有效的错误处理和记录管理，提高了应用的稳定性。
+美观的设计：使用 CustomTkinter 提供了美观的界面，并统一了字体和颜色，提升视觉效果。
+反馈问题请联系邮箱：ems@gangchuan.email
 
+Software Features
+Generate random airports:
 
+Function: Generate random airports according to the conditions set by the user.
+Conditions: Users can choose whether to generate only Chinese airports, generate airports within 600 nautical miles, and set the minimum distance (nautical miles).
+Record function:
 
-Software Function Overview
-This software is an application for randomly generating and comparing airport information. Its main functions include:
+Record the generated results: The generated airport information will be recorded, including the timestamp and the generated results.
+View history: You can view the generated history and clear it.
+Scroll bar support: The record display area supports scrolling, which is convenient for viewing a large number of records.
+Loading animation:
 
-Randomly generate two airports:
+Function: When processing operations that take a long time, display the loading animation to improve the user experience.
+Feedback function:
 
-The software can randomly select two different airports from a predefined list of airports.
+Function: Provide a feedback button, which can open the email client after clicking it, and pre-fill the email address as ems@gangchuan.top, so that users can feedback problems or suggestions.
+Custom user interface (UI):
 
-The list of airports includes major domestic and international civil airports.
+Modern design: Use the CustomTkinter library to create a modern and technological user interface.
+Dark mode: The interface supports dark mode, which is in line with the design trend of modern applications.
+Responsive layout: The interface elements adjust the layout according to the window size to ensure that they can be displayed normally under different resolutions and window sizes.
+Unified fonts and colors: Microsoft YaHei fonts are used uniformly, and custom color options are provided to improve visual consistency.
+User-friendly operation:
 
-Calculate and display the straight-line distance between two airports:
+Slider adjustment: The minimum distance adjustment uses a slider, and users can easily set the minimum distance.
+Button style: The button style is modern, with clear text and color to improve user experience.
+Error handling: Provides an error prompt box to help users correct input errors.
+Clear application logic:
 
-Calculate the straight-line distance between two randomly generated airports in nautical miles.
+Functional partitioning: The main interface is divided into airport generation, record display and feedback function areas, with a clear layout.
+Record clearing and display: Provides the function of clearing records and displays updated records on the record interface.
+Customizable interface:
 
-The straight-line distance is calculated using the longitude and latitude of two points on the earth to ensure the accuracy of the distance calculation.
-
-User Interface:
-
-Generate Random Airports: Users can click a button to generate two random airports and view their relevant information.
-
-Option within 600 nautical miles: Users can choose to generate airport pairs within 600 nautical miles.
-
-Display Results: The generated results are displayed in the form of a pop-up window, including the name of the airport, four-character code, distance and other information.
-
-UI Design: The interface is optimized with rounded frosted glass effect, and the buttons and options are beautified to ensure a friendly user experience.
-
-User Interaction:
-
-Generate Button: Users click the "Generate Random Airport" button to perform random selection and distance calculation operations.
-Close button: Users can close the result window or the main window, which is easy to operate.
-Detailed description of main functions
-Randomly generate airports
-Function: Randomly select two different airports from a list of major civil airports in the world and China.
-Implementation: Use Python's random module for random selection to ensure that the results generated each time are different.
-Calculate straight-line distance
-Function: Calculate the straight-line distance between two airports in nautical miles.
-Implementation: Use geographic coordinates (longitude and latitude) to calculate the distance between two points. The commonly used formula is the Haversine formula, which is applicable to the distance calculation between two points on the earth's surface.
-User interface
-Generate button: Click the button to generate two random airports and their straight-line distance.
-Option within 600 nautical miles: Users can choose whether to generate only airport pairs within 600 nautical miles.
-Result display: The results are displayed in a pop-up window, including:
-Airport name
-Four-character code (ICAO code)
-Distance (in nautical miles)
-UI design
-Interface beautification: Use rounded frosted glass effect to enhance the visual effect, making the interface look modern and friendly.
-Buttons and options: Buttons and options are designed to ensure user-friendly, uniform and aesthetically pleasing interface.
-Use scenarios
-Aviation enthusiasts: Users interested in aviation can use the software to randomly select two airports and find out the distance between them.
-Airlines and pilots: It can be used to test the distance between airports, help plan routes or understand the geographical relationship between airports.
-Educational use: It can be used as a teaching tool for geography or aviation subjects to help students understand the practical application of geography and distance calculations.
-Summary
-The software's features not only provide a fun way to explore airports around the world, but also provide practical information in an easy-to-use interface. Both aviation enthusiasts and professionals can get valuable data and a pleasant user experience from it. If you have any further feature requests or suggestions for improvements, please feel free to suggest them!
-
+Theme switching: Supports switching between dark mode and light mode to adapt to different user preferences.
+Buttons and labels: The styles of all buttons and labels can be adjusted as needed to match the theme and style of the application.
+Software advantages
+User experience optimization: Modern UI design and responsive layout ensure a good user experience.
+Comprehensive functions: Not only can it generate random airports, but it also provides a variety of functions such as recording and feedback to meet the needs of different users.
+Ease of use: The interface is intuitive and the operation is simple, suitable for all kinds of users.
+Flexible configuration: Users can set generation conditions and adjust interface themes according to their needs.
+Stability: The stability of the application is improved through effective error handling and record management.
+Beautiful design: CustomTkinter is used to provide a beautiful interface, and the fonts and colors are unified to improve the visual effect.
 ![9f8cb5cb9aa59789cc0e59a3b6cb1501](https://github.com/user-attachments/assets/fb90618e-1ec1-4e43-9f53-c50df06207a0)
 ![fbadf9deebe3e99490dec85187d2b379](https://github.com/user-attachments/assets/cc87e0a3-e83a-4864-a895-5775603479c5)
 
